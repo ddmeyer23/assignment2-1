@@ -47,6 +47,18 @@ esriConfig.apiKey = "AAPKd4d1409330c24f5d94d248e29ee9b9dbQ1o4rWp08e-PK5OuGEdo9He
   view.ui.add(basemapToggle,"bottom-right"); 
   
   
+  //Ice Age Trail feature layer (lines)
+  const trailsLayer = new FeatureLayer({
+    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trails_Styled/FeatureServer/0"
+  });
+ map.add(trailsLayer, 0);      
+        
+ //WI historic points of interest (points)
+  const landmarks = new FeatureLayer({
+    url: "https://services3.arcgis.com/OwVO8oKCUjTngz5f/arcgis/rest/services/WI_national_Historic_landmark/FeatureServer/0"
+  });
+map.add(landmarks);
+  
 });
  </script>
   </head>
